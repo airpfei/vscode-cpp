@@ -51,7 +51,19 @@
         "vector": "cpp",
         "__split_buffer": "cpp"
     },
+    // cmake
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
     "cmake.autoRestartBuild": false,
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+
+    // editor
+    "editor.renderWhitespace": "all",
+    "editor.renderFinalNewline": true,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "files.trimTrailingWhitespace": true
+    },
 }
