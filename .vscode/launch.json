@@ -15,6 +15,29 @@
             "osx": {
                 "MIMode": "lldb"
             }
+        },
+        {
+            "name": "lldb debug android",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/out/hello",
+            "initCommands": [
+                "platform select remote-android",
+                "platform connect unix-abstract-connect:///data/local/tmp/lldb/tmp/debug.sock",
+                "process attach -p 1234"
+            ],
+            "env": {
+                "LD_LIBRARY_PATH":"/data/local/tmp/lldb/tmp"
+            },
+            "exitCommands":[
+                "exit",
+            ],
+            "postRunCommands": [
+                "add-dsym /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt/libflutter.so",
+                "add-dsym /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/symbols/system/lib/libart.so",
+                "settings set target.source-map /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt /home/daniel/Workspace/flutter/engine/src/",
+                "settings set target.source-map /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/system/lib /home/daniel/Workspace/android/source_code/android-8.1.0_r33/art/"
+            ]
         }
     ]
 }

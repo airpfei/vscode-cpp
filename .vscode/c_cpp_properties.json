@@ -1,5 +1,5 @@
 {
-    "env" : {
+    "env": {
         "myDefaultIncludePath": [
             "${workspaceFolder}",
             "${workspaceFolder}/include",
@@ -10,18 +10,28 @@
         {
             "name": "Mac",
             "intelliSenseMode": "clang-x64",
-            "includePath": [ "${myDefaultIncludePath}" ],
-            "macFrameworkPath": [ "/System/Library/Frameworks" ],
-            "defines": [ "FOO", "BAR=100" ],
+            "includePath": [
+                "${myDefaultIncludePath}"
+            ],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks"
+            ],
+            "defines": [
+                "FOO",
+                "BAR=100"
+            ],
             "forcedInclude": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++14",
             "browse": {
-                "path": [ "${workspaceFolder}" ],
+                "path": [
+                    "${workspaceFolder}"
+                ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            }
+            },
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
     "version": 4

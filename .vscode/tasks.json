@@ -24,6 +24,16 @@
             "dependsOn": [
                 "build"
             ]
-        }
+        },
+        {
+            "label": "start_lldb_server_remote_android",
+            "type": "shell",
+            "command": "sh",
+            "args": [
+              "${workspaceFolder}/script/start_lldb_server_remote_android.sh"
+            ],
+            "isBackground": true,
+            "problemMatcher": []
+        },
     ]
 }
