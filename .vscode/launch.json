@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // https://github.com/CaiHuan/toolkits/blob/3372901dfd9b74c9cfa98553a16e9f5505fde7ce/lldb_server/vscode_debug_configure.json
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch",
+            "program": "${workspaceFolder}/out/hello",
+            "args": ["abc"],
+            "cwd": "${workspaceFolder}",
+            "osx": {
+                "MIMode": "lldb"
+            }
+        }
+    ]
+}
