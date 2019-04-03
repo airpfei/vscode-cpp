@@ -6,37 +6,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Launch",
-            "program": "${workspaceFolder}/out/hello",
-            "args": ["abc"],
-            "cwd": "${workspaceFolder}",
-            "osx": {
-                "MIMode": "lldb"
-            }
-        },
-        {
             "name": "lldb debug android",
             "type": "lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/out/hello",
+            "request": "attach",
+            "program": "app_process32",
             "initCommands": [
                 "platform select remote-android",
-                "platform connect unix-abstract-connect:///data/local/tmp/lldb/tmp/debug.sock",
-                "process attach -p 1234"
-            ],
-            "env": {
-                "LD_LIBRARY_PATH":"/data/local/tmp/lldb/tmp"
-            },
-            "exitCommands":[
-                "exit",
+                "platform connect connect://localhost:9527",
             ],
             "postRunCommands": [
-                "add-dsym /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt/libflutter.so",
-                "add-dsym /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/symbols/system/lib/libart.so",
-                "settings set target.source-map /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt /home/daniel/Workspace/flutter/engine/src/",
-                "settings set target.source-map /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/system/lib /home/daniel/Workspace/android/source_code/android-8.1.0_r33/art/"
+                // "target modules add /Users/pengfei/test/NdkDebug/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
+                "add-dsym /Users/pengfei/test/NdkDebug/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so"
+                // "add-dsym /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt/libflutter.so",
+                // "add-dsym /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/symbols/system/lib/libart.so",
+                // "settings set target.source-map /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt /home/daniel/Workspace/flutter/engine/src/",
+                // "settings set target.source-map /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/system/lib /home/daniel/Workspace/android/source_code/android-8.1.0_r33/art/"
             ]
         }
     ]
