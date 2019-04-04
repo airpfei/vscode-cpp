@@ -12,7 +12,7 @@
             "program": "app_process32",
             "initCommands": [
                 "platform select remote-android",
-                "platform connect connect://localhost:9527",
+                "platform connect unix-abstract-connect:///data/local/tmp/debug.sock",
             ],
             "postRunCommands": [
                 "settings set target.source-map /Users/pengfei/test/NdkDebug ${workspaceFolder}/test/NdkDebug",
