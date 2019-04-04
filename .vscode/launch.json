@@ -15,10 +15,9 @@
                 "platform connect connect://localhost:9527",
             ],
             "postRunCommands": [
-                // "target modules add /Users/pengfei/test/NdkDebug/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
-                "add-dsym /Users/pengfei/test/NdkDebug/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so"
-                // "add-dsym /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt/libflutter.so",
-                // "add-dsym /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/symbols/system/lib/libart.so",
+                // "target modules add ${workspaceFolder}/test/libnative-lib.so",
+                "settings set target.source-map /Users/pengfei/test/NdkDebug ${workspaceFolder}/test/NdkDebug",
+                "add-dsym ${workspaceFolder}/test/libnative-lib.so",
                 // "settings set target.source-map /home/daniel/Workspace/flutter/engine/src/out/android_debug_unopt /home/daniel/Workspace/flutter/engine/src/",
                 // "settings set target.source-map /home/daniel/Workspace/android/source_code/android-8.1.0_r33/out/target/product/bullhead/system/lib /home/daniel/Workspace/android/source_code/android-8.1.0_r33/art/"
             ]

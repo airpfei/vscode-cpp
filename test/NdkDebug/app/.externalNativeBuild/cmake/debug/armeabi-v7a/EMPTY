@@ -1,0 +1,3 @@
+Source location: /Users/pengfei/test/NdkDebug/app/.externalNativeBuild/cmake/debug/armeabi-v7a/../../../../src/main/cpp/native-lib.cpp:29
+
+相对路径需要存在，所以需要这个目录
