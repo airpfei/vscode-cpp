@@ -9,14 +9,14 @@
             "name": "lldb debug android",
             "type": "lldb",
             "request": "attach",
-            "program": "app_process32",
+            "pid": "11981",
             "initCommands": [
                 "platform select remote-android",
                 "platform connect unix-abstract-connect:///data/local/tmp/debug.sock",
             ],
             "postRunCommands": [
-                "settings set target.source-map /Users/pengfei/test/NdkDebug ${workspaceFolder}/test/NdkDebug",
-                "add-dsym ${workspaceFolder}/test/libnative-lib.so",
+                "settings set target.source-map /data01/jenkins/workspace/SDK_Android_CAM_RD_Super /Users/pengfei/workspace/effect_sdk",
+                "add-dsym /Users/pengfei/Downloads/libeffect.so",
             ]
         }
     ]

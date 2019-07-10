@@ -2,7 +2,7 @@
 #!/bin/sh
 
 sdk="/Users/pengfei/Library/Android/sdk"
-pkg="com.example.pengfei.ndkdebug"
+pkg="com.ss.android.ugc.aweme"
 
 adb shell 'pkill lldb-server'
 adb shell "run-as ${pkg} sh -c 'pkill lldb-server'"
